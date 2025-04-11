@@ -1,0 +1,47 @@
+.table-container {
+  overflow-x: auto;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.custom-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+  min-width: 600px;
+}
+
+.custom-table th,
+.custom-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.custom-table th {
+  background-color: #9c9c9c;
+  color: white;
+  font-weight: bold;
+  position: sticky;
+  top: 0;
+}
+
+.custom-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* Custom class for history table */
+.history-table .special-number {
+  color: #e73131;
+  font-weight: bold;
+  margin: 0 5px;
+}
+
+@media (max-width: 600px) {
+  .custom-table th,
+  .custom-table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+}

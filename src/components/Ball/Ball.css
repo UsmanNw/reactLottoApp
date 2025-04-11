@@ -1,0 +1,20 @@
+.ball {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: white;
+  font-size: 24px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.ball.default {
+  background: #1bb40d;
+}
+.ball.jolly {
+  background: #e73131;
+}
+.ball.superstar {
+  background: #fa9119;
+}

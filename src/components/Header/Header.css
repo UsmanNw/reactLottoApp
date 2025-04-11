@@ -1,0 +1,9 @@
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.draw-info p {
+  margin: 5px 0;
+  color: #666;
+}

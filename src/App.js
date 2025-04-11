@@ -1,23 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState, useEffect } from "react";
+import SuperEnalotto from "./components/SuperEnalotto";
+import SuperEnalottoHistory from "./components/SuperEnalottoHistory";
+import { initializeNumbers } from "./utlis/numbers";
 
 function App() {
+  const [history, setHistory] = useState([]);
+  const [drawNumber, setDrawNumber] = useState(52);
+
+  useEffect(() => {
+    const initial = initializeNumbers();
+    setHistory([
+      {
+        drawNumber,
+        mainNumbers: initial.main,
+        specialNumbers: initial.special.map((n) => n.number),
+      },
+    ]);
+  }, []);
+
+  const addCompletedDraw = (main, special) => {
+    const newDraw = {
+      drawNumber: drawNumber + 1,
+      mainNumbers: main,
+      specialNumbers: special,
+    };
+    setDrawNumber((prev) => prev + 1);
+    setHistory((prev) => [newDraw, ...prev]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <SuperEnalotto
+        onComplete={addCompletedDraw}
+        nextDrawNumber={drawNumber + 1}
+      />
+      <SuperEnalottoHistory history={history} />
     </div>
   );
 }

@@ -1,0 +1,37 @@
+.super-enalotto {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.numbers-container {
+  text-align: center;
+}
+
+.main-numbers,
+.special-numbers {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.generate-button {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 25px;
+  background: #0d63b4;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background 0.3s ease;
+}
+
+.generate-button:hover {
+  background: #0a3b96;
+}
