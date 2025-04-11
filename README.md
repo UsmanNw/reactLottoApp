@@ -68,3 +68,85 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+# React App
+
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+---
+
+## React App Setup & GitHub Upload Notes
+Date: 2025-04-11
+
+### STEP 1: Install Node.js
+1. Go to https://nodejs.org  
+2. Download the LTS version and install it.  
+3. Confirm installation:
+   ```
+   node -v
+   npm -v
+   ```
+
+### STEP 2: Create React App
+1. Open Command Prompt or PowerShell  
+2. Navigate to desired folder:
+   ```
+   cd C:\Users\YourName\Documents
+   ```
+3. Create a new React app:
+   ```
+   npx create-react-app my-app
+   ```
+4. Navigate into the app:
+   ```
+   cd my-app
+   ```
+5. Start the app:
+   ```
+   npm start
+   ```
+
+### STEP 3: Update Node & npm (if needed)
+- Visit https://nodejs.org and reinstall the latest LTS version.  
+- Or use NVM for Windows: https://github.com/coreybutler/nvm-windows/releases
+
+### STEP 4: Upload Project to GitHub
+1. Go to https://github.com and create a new repository (don't initialize with README).  
+2. In your terminal:
+   ```
+   cd path\to\my-app
+   git init
+   git add .
+   git commit -m "Initial commit"
+   ```
+3. Add remote:
+   ```
+   git remote add origin https://github.com/YourUsername/repo-name.git
+   ```
+4. Rename default branch to main:
+   ```
+   git branch -M main
+   ```
+
+### STEP 5: Push to GitHub
+
+**Option A: If the remote is empty:**
+```
+git push -u origin main
+```
+
+**Option B: If remote already has a README or other files:**
+```
+git push -u origin main --force
+```
+or
+```
+git pull origin main --allow-unrelated-histories
+git push -u origin main
+```
+
+---
+
+✅ You're all set! Your React app is live on GitHub.
